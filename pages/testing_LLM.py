@@ -91,11 +91,11 @@ if submitted:
             llm_answer_groq = fetch_llm_response(question)
 
         with st.spinner("Fetching answer from Mistral-Nemo-Instruct-2407 LLM..."):
-            llm_answer_hf = fetch_huggingface_response(question, model="bigscience/bloom")  # Or "google/flan-t5-large"
+            llm_answer_hf = fetch_huggingface_response(question, model="bigscience/bloom")  
 
-        st.write("**GROQ LLM's Answer:**")
+        st.write("**Llama 3.1.8b-instant LLM's Answer:**")
         st.success(llm_answer_groq)
-        st.write("**Hugging Face LLM's Answer:**")
+        st.write("**Mistral-Nemo-Instruct-2407 LLM's Answer:**")
         st.success(llm_answer_hf)
 
         # Store both answers for metrics comparison
